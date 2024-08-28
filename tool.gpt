@@ -7,10 +7,10 @@ Args: output_file: (optional) The path to save the output file. Default is "tran
 
 #!/bin/bash
 
-audio_file=${audio_file:-""}
-model=${model:-"whisper-1"}
-response_format=${response_format:-"json"}
-output_file=${output_file:-"transcription"}
+audio_file=${AUDIO_FILE:-""}
+model=${MODEL:-"whisper-1"}
+response_format=${RESPONSE_FORMAT:-"json"}
+output_file=${OUTPUT_FILE:-"transcription"}
 
 if [ -z "$OPENAI_API_KEY" ]; then
 echo "OPENAI_API_KEY is not set. Unable to transcribe audio. Please set the OPENAI_API_KEY as an environment variable."
